@@ -1,0 +1,86 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum CustomerType {
+  Free
+  Pro
+  Enterprise
+}
+
+enum ProductArea {
+  Billing
+  Auth
+  Dashboard
+  API
+}
+
+enum UserUrgency {
+  Low
+  Medium
+  High
+  Urgent
+}
+
+enum TicketStatus {
+  Open
+  UnderReview
+  Escalated
+  Closed
+}
+
+enum ActionStatus {
+  Pending
+  Approved
+  Rejected
+}
+
+model Ticket {
+  id                    String        @id @default(cuid())
+  title                 String
+  customerType          CustomerType  @map("customer_type")
+  productArea           ProductArea   @map("product_area")
+  issueDescription      String        @map("issue_description")
+  previousCommunication String?       @map("previous_communication")
+  userUrgency           UserUrgency   @map("user_urgency")
+  status                TicketStatus  @default(Open)
+  aiSuggestedUrgency    UserUrgency?  @map("ai_suggested_urgency")
+  aiCategory            String?       @map("ai_category")
+  missingInfoFlags      String[]      @map("missing_info_flags")
+  draftedResponse       String?       @map("drafted_response")
+  suggestedInternalAction Json?       @map("suggested_internal_action")
+  citedSources          String[]      @map("cited_sources")
+  createdAt             DateTime      @default(now()) @map("created_at")
+  updatedAt             DateTime      @updatedAt @map("updated_at")
+  auditLogs             TicketAuditLog[]
+
+  @@map("tickets")
+}
+
+model KnowledgeBaseArticle {
+  id        String   @id @default(cuid())
+  title     String
+  category  String
+  content   String
+  tags      String[]
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("knowledge_base_articles")
+}
+
+model TicketAuditLog {
+  id          String   @id @default(cuid())
+  ticketId    String   @map("ticket_id")
+  actionTaken String   @map("action_taken")
+  performedBy String   @map("performed_by")
+  timestamp   DateTime @default(now())
+  ticket      Ticket   @relation(fields: [ticketId], references: [id], onDelete: Cascade)
+
+  @@map("ticket_audit_logs")
+}

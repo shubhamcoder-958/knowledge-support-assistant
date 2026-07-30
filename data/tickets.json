@@ -1,0 +1,375 @@
+{
+  "tickets": [
+    {
+      "id": "ticket-001",
+      "title": "Unable to update billing email on invoice portal",
+      "customerType": "Pro",
+      "productArea": "Billing",
+      "userUrgency": "High",
+      "aiSuggestedUrgency": "High",
+      "status": "Open",
+      "issueDescription": "Customer cannot update the billing email address tied to invoices after changing their company contact.",
+      "previousCommunication": "Asked for a screenshot of the billing tab but none was provided.\n",
+      "draftedResponse": "Thank you for reaching out. I understand you're having trouble updating the billing email address for your invoices. According to our guide (kb-001), customers can typically update billing contact details from the billing settings page. If the change does not appear immediately, it is recommended to verify the account email and ensure the contact change is saved. To help us investigate this further, could you please provide a screenshot of the section where you are attempting to update the billing email on the invoice portal? Also, are you encountering any specific error messages? Could you describe the exact steps you are taking to update the billing email, and confirm if you are attempting this through the 'billing settings page'?",
+      "missingInfoFlags": [
+        "Error Screenshot",
+        "Exact Error Message",
+        "Specific steps taken by the customer",
+        "Location within the portal where the customer is attempting the update"
+      ],
+      "followUpQuestions": [
+        "Please share error screenshot",
+        "Please share exact error message",
+        "Please share specific steps taken by the customer",
+        "Please share location within the portal where the customer is attempting the update"
+      ],
+      "suggestedAction": {
+        "title": "REQUEST_CLARIFICATION",
+        "description": "Customer needs to provide a screenshot of the billing section, exact steps taken, and any error messages to help troubleshoot the inability to update the billing email.",
+        "status": "PENDING_APPROVAL"
+      },
+      "citedSources": [
+        {
+          "id": "KB-102",
+          "title": "kb-001",
+          "relevance": "High"
+        }
+      ],
+      "history": [
+        {
+          "label": "Draft approved by Agent",
+          "time": "4:30 PM"
+        },
+        {
+          "label": "Status changed to Open",
+          "time": "2:10 PM"
+        },
+        {
+          "label": "Status changed to Under Review",
+          "time": "8:26 PM"
+        },
+        {
+          "label": "Status changed to Open",
+          "time": "8:44 PM"
+        },
+        {
+          "label": "Status changed to Under Review",
+          "time": "8:44 PM"
+        },
+        {
+          "label": "AI agent refreshed the draft and sources",
+          "time": "8:45 PM"
+        },
+        {
+          "label": "Status changed to Closed",
+          "time": "8:45 PM"
+        },
+        {
+          "label": "Status changed to Under Review",
+          "time": "8:45 PM"
+        },
+        {
+          "label": "Status changed to Open",
+          "time": "8:45 PM"
+        },
+        {
+          "label": "AI agent refreshed the draft and sources",
+          "time": "8:45 PM"
+        },
+        {
+          "label": "AI agent refreshed the draft and sources",
+          "time": "9:19 PM"
+        },
+        {
+          "label": "Status changed to Open",
+          "time": "8:38"
+        },
+        {
+          "label": "Status changed to Under Review",
+          "time": "8:39"
+        },
+        {
+          "label": "Status changed to Open",
+          "time": "8:40 AM"
+        },
+        {
+          "label": "Status changed to Under Review",
+          "time": "8:40 AM"
+        },
+        {
+          "label": "Status changed to Under Review",
+          "time": "8:40 AM"
+        },
+        {
+          "label": "Status changed to Closed",
+          "time": "8:40 AM"
+        },
+        {
+          "label": "Status changed to Open",
+          "time": "8:41 AM"
+        },
+        {
+          "label": "Status changed to Under Review",
+          "time": "9:27 AM"
+        },
+        {
+          "label": "Status changed to Open",
+          "time": "9:27 AM"
+        },
+        {
+          "label": "AI agent refreshed the draft and sources",
+          "time": "9:35 AM"
+        },
+        {
+          "label": "Draft approved and queued for review",
+          "time": "9:35 AM"
+        },
+        {
+          "label": "Draft approved and queued for review",
+          "time": "9:35 AM"
+        },
+        {
+          "label": "Status changed to Open",
+          "time": "9:36 AM"
+        },
+        {
+          "label": "Status changed to Under Review",
+          "time": "9:36 AM"
+        },
+        {
+          "label": "AI agent refreshed the draft and sources",
+          "time": "9:36 AM"
+        },
+        {
+          "label": "AI agent refreshed the draft and sources",
+          "time": "10:38 AM"
+        },
+        {
+          "label": "Draft approved and queued for review",
+          "time": "10:39 AM"
+        },
+        {
+          "label": "Status changed to Closed",
+          "time": "10:39 AM"
+        },
+        {
+          "label": "Status changed to Open",
+          "time": "10:43 AM"
+        },
+        {
+          "label": "Status changed to Under Review",
+          "time": "10:43 AM"
+        },
+        {
+          "label": "Status changed to Open",
+          "time": "10:43 AM"
+        },
+        {
+          "label": "Status changed to Under Review",
+          "time": "10:43 AM"
+        },
+        {
+          "label": "Status changed to Escalated",
+          "time": "10:43 AM"
+        },
+        {
+          "label": "Status changed to Open",
+          "time": "10:43 AM"
+        },
+        {
+          "label": "Status changed to Under Review",
+          "time": "10:43 AM"
+        },
+        {
+          "label": "Status changed to Open",
+          "time": "10:43 AM"
+        },
+        {
+          "label": "Draft rejected",
+          "time": "10:43 AM"
+        },
+        {
+          "label": "Internal action approved",
+          "time": "10:44 AM"
+        },
+        {
+          "label": "Status changed to Under Review",
+          "time": "11:47 AM"
+        },
+        {
+          "label": "Status changed to Escalated",
+          "time": "11:47 AM"
+        },
+        {
+          "label": "Status changed to Open",
+          "time": "11:47 AM"
+        },
+        {
+          "label": "Internal action rejected",
+          "time": "11:56 AM"
+        },
+        {
+          "label": "AI agent refreshed the draft and sources",
+          "time": "12:33 PM"
+        },
+        {
+          "label": "Draft approved and queued for review",
+          "time": "12:34 PM"
+        },
+        {
+          "label": "Internal action approved",
+          "time": "12:34 PM"
+        },
+        {
+          "label": "Status changed to Open",
+          "time": "12:34 PM"
+        },
+        {
+          "label": "Draft approved and queued for review",
+          "time": "12:39 PM"
+        },
+        {
+          "label": "Internal action approved",
+          "time": "12:39 PM"
+        },
+        {
+          "label": "Status changed to Escalated",
+          "time": "12:40 PM"
+        },
+        {
+          "label": "Status changed to Open",
+          "time": "12:40 PM"
+        },
+        {
+          "label": "Status changed to Under Review",
+          "time": "12:40 PM"
+        },
+        {
+          "label": "Status changed to Open",
+          "time": "12:40 PM"
+        },
+        {
+          "label": "Status changed to Under Review",
+          "time": "12:40 PM"
+        },
+        {
+          "label": "Status changed to Open",
+          "time": "12:40 PM"
+        }
+      ]
+    },
+    {
+      "id": "ticket-002",
+      "title": "SSO login fails after password reset",
+      "customerType": "Pro",
+      "productArea": "Billing",
+      "userUrgency": "Urgent",
+      "aiSuggestedUrgency": "Urgent",
+      "status": "Under Review",
+      "issueDescription": "User is unable to sign in with SSO after resetting the password and receiving a verification email.",
+      "previousCommunication": "Customer mentioned the issue affects two team members.",
+      "draftedResponse": "Thank you for reaching out. I understand you're experiencing issues signing in with SSO after a password reset, affecting two team members. SSO login failures after a password reset can sometimes occur. To help us troubleshoot this, please try the following steps:\n\n1.  Confirm that your identity provider is reachable.\n2.  Verify your browser's cookie policy.\n3.  Attempt to log in from an incognito or private browsing window.\n\nTo further assist you, could you please provide the following information:\n\n*   Could you please confirm if you have checked the status of your Identity Provider (IdP)?\n*   What browser are you currently using?\n*   Have you tried logging in using an incognito or private browsing window?\n*   Could you provide the exact error message you are receiving?\n*   Which Identity Provider (e.g., Okta, Azure AD) are you using for SSO?\n\nOnce we have this information, we can investigate further.",
+      "missingInfoFlags": [
+        "Identity Provider Status",
+        "Browser",
+        "Incognito Window Attempt",
+        "Exact Error Message",
+        "Identity Provider"
+      ],
+      "followUpQuestions": [
+        "Please share identity provider status",
+        "Please share browser",
+        "Please share incognito window attempt",
+        "Please share exact error message",
+        "Please share identity provider"
+      ],
+      "suggestedAction": {
+        "title": "REQUEST_CLARIFICATION",
+        "description": "Requesting more details from the customer regarding their Identity Provider status, browser, incognito attempt, exact error message, and specific IdP to further troubleshoot the SSO login failure.",
+        "status": "PENDING_APPROVAL"
+      },
+      "citedSources": [
+        {
+          "id": "KB-102",
+          "title": "kb-002",
+          "relevance": "High"
+        }
+      ],
+      "history": [
+        {
+          "label": "Action requested by support lead",
+          "time": "3:15 PM"
+        },
+        {
+          "label": "Draft edited",
+          "time": "1:05 PM"
+        },
+        {
+          "label": "Status changed to Open",
+          "time": "10:39 AM"
+        },
+        {
+          "label": "AI agent refreshed the draft and sources",
+          "time": "10:40 AM"
+        },
+        {
+          "label": "Status changed to Open",
+          "time": "10:40 AM"
+        },
+        {
+          "label": "Status changed to Open",
+          "time": "10:40 AM"
+        },
+        {
+          "label": "Status changed to Under Review",
+          "time": "10:41 AM"
+        },
+        {
+          "label": "Status changed to Open",
+          "time": "11:46 AM"
+        },
+        {
+          "label": "Draft saved",
+          "time": "11:47 AM"
+        },
+        {
+          "label": "Internal action approved",
+          "time": "11:47 AM"
+        },
+        {
+          "label": "AI agent refreshed the draft and sources",
+          "time": "12:35 PM"
+        },
+        {
+          "label": "Draft approved and queued for review",
+          "time": "12:35 PM"
+        },
+        {
+          "label": "Internal action rejected",
+          "time": "12:35 PM"
+        },
+        {
+          "label": "Status changed to Open",
+          "time": "12:36 PM"
+        },
+        {
+          "label": "AI agent refreshed the draft and sources",
+          "time": "12:36 PM"
+        },
+        {
+          "label": "Status changed to Open",
+          "time": "12:36 PM"
+        },
+        {
+          "label": "Draft approved and queued for review",
+          "time": "12:39 PM"
+        },
+        {
+          "label": "Status changed to Under Review",
+          "time": "12:39 PM"
+        }
+      ]
+    }
+  ],
+  "updatedAt": "2026-07-30T07:10:22.759Z"
+}

@@ -1,0 +1,188 @@
+{
+  "tickets": [
+    {
+      "id": "ticket-001",
+      "title": "Unable to update billing email on invoice portal",
+      "customer_type": "Free",
+      "product_area": "Billing",
+      "issue_description": "Customer cannot update the billing email address tied to invoices after changing their company contact.",
+      "previous_communication": "Asked for a screenshot of the billing tab but none was provided.",
+      "user_urgency": "High",
+      "status": "Open",
+      "ai_suggested_urgency": "High",
+      "ai_category": "Billing Update",
+      "missing_info_flags": ["billing screenshot", "account identifier"],
+      "drafted_response": "Thanks for flagging this. I can help you update the billing email address and confirm the change in the billing profile.",
+      "suggested_internal_action": {
+        "action_type": "Request account verification",
+        "description": "Ask the customer to confirm the account email and billing contact before changing records.",
+        "status": "Pending"
+      },
+      "cited_sources": ["kb-001: Billing contact update guide", "kb-004: Invoice portal FAQ"],
+      "created_at": "2026-07-20T09:15:00.000Z",
+      "updated_at": "2026-07-20T09:15:00.000Z"
+    },
+    {
+      "id": "ticket-002",
+      "title": "SSO login fails after password reset",
+      "customer_type": "Pro",
+      "product_area": "Auth",
+      "issue_description": "User is unable to sign in with SSO after resetting the password and receiving a verification email.",
+      "previous_communication": "Customer mentioned the issue affects two team members.",
+      "user_urgency": "Urgent",
+      "status": "Under Review",
+      "ai_suggested_urgency": "Urgent",
+      "ai_category": "Authentication Failure",
+      "missing_info_flags": ["device type", "browser version"],
+      "drafted_response": "I’m reviewing the login issue and will share the next support steps shortly.",
+      "suggested_internal_action": {
+        "action_type": "Escalate to auth engineering",
+        "description": "Investigate recent password reset flow changes for SSO compatibility.",
+        "status": "Pending"
+      },
+      "cited_sources": ["kb-002: SSO troubleshooting steps", "kb-005: Password reset best practices"],
+      "created_at": "2026-07-21T14:05:00.000Z",
+      "updated_at": "2026-07-21T15:40:00.000Z"
+    },
+    {
+      "id": "ticket-003",
+      "title": "Dashboard widgets are not loading after update",
+      "customer_type": "Enterprise",
+      "product_area": "Dashboard",
+      "issue_description": "A key dashboard widget remains blank after the latest product update and only affects the analytics view.",
+      "previous_communication": "Customer reports the issue started after deploying the new dashboard theme.",
+      "user_urgency": "Medium",
+      "status": "Escalated",
+      "ai_suggested_urgency": "High",
+      "ai_category": "Dashboard Rendering",
+      "missing_info_flags": ["workspace ID"],
+      "drafted_response": "Thanks for the details. We have escalated this to the dashboard team and will follow up with a fix update.",
+      "suggested_internal_action": {
+        "action_type": "Collect workspace telemetry",
+        "description": "Gather browser console logs and widget configuration details for diagnosis.",
+        "status": "Approved"
+      },
+      "cited_sources": ["kb-003: Dashboard widget troubleshooting", "kb-004: Known dashboard issues"],
+      "created_at": "2026-07-18T07:20:00.000Z",
+      "updated_at": "2026-07-19T10:00:00.000Z"
+    },
+    {
+      "id": "ticket-004",
+      "title": "API rate limit errors for webhook retries",
+      "customer_type": "Pro",
+      "product_area": "API",
+      "issue_description": "Customer is seeing intermittent 429 API responses while retrying failed webhook deliveries.",
+      "previous_communication": "Customer mentioned they are on the usage-based tier and need a retry window extension.",
+      "user_urgency": "Medium",
+      "status": "Open",
+      "ai_suggested_urgency": "Medium",
+      "ai_category": "Rate Limiting",
+      "missing_info_flags": ["request IDs"],
+      "drafted_response": "I’ve prepared a response explaining the rate limit behavior and recommended retry adjustments.",
+      "suggested_internal_action": {
+        "action_type": "Check rate-limit policy",
+        "description": "Verify whether the customer is eligible for temporary retry allowance under the current plan.",
+        "status": "Pending"
+      },
+      "cited_sources": ["kb-005: API rate limit policy", "kb-002: Webhook retry guidance"],
+      "created_at": "2026-07-22T11:30:00.000Z",
+      "updated_at": "2026-07-22T11:30:00.000Z"
+    },
+    {
+      "id": "ticket-005",
+      "title": "Invoice download returns empty PDF",
+      "customer_type": "Enterprise",
+      "product_area": "Billing",
+      "issue_description": "Customer reports that the invoice download link produces a blank PDF when opened in the browser.",
+      "previous_communication": "No previous communication recorded.",
+      "user_urgency": "Low",
+      "status": "Closed",
+      "ai_suggested_urgency": "Low",
+      "ai_category": "Invoice Export",
+      "missing_info_flags": [],
+      "drafted_response": "Thanks for reporting this. We confirmed the invoice export issue and shared the workaround.",
+      "suggested_internal_action": {
+        "action_type": "Close with workaround",
+        "description": "Confirm the issue is resolved with the provided browser workaround and archive the ticket.",
+        "status": "Approved"
+      },
+      "cited_sources": ["kb-001: Billing contact update guide", "kb-004: Invoice portal FAQ"],
+      "created_at": "2026-07-15T16:00:00.000Z",
+      "updated_at": "2026-07-16T08:15:00.000Z"
+    }
+  ],
+  "knowledgeBaseArticles": [
+    {
+      "id": "kb-001",
+      "title": "Billing contact update guide",
+      "category": "Billing",
+      "content": "Customers can update billing contact details from the billing settings page. If the change does not appear immediately, verify the account email and ensure the contact change is saved.",
+      "tags": ["billing", "contact", "profile"]
+    },
+    {
+      "id": "kb-002",
+      "title": "SSO troubleshooting steps",
+      "category": "Auth",
+      "content": "If SSO fails after a password reset, confirm the identity provider is reachable, verify the browser cookie policy, and retry from an incognito window.",
+      "tags": ["auth", "sso", "login"]
+    },
+    {
+      "id": "kb-003",
+      "title": "Dashboard widget troubleshooting",
+      "category": "Dashboard",
+      "content": "Blank widgets are often caused by stale browser cache or incompatible browser extensions. Check the browser console and verify the widget configuration.",
+      "tags": ["dashboard", "widgets", "troubleshooting"]
+    },
+    {
+      "id": "kb-004",
+      "title": "Invoice portal FAQ",
+      "category": "Billing",
+      "content": "Invoices can be viewed, downloaded, and shared from the invoice portal. If a generated PDF is blank, try a different browser or clear cached content.",
+      "tags": ["billing", "invoices", "pdf"]
+    },
+    {
+      "id": "kb-005",
+      "title": "API rate limit policy",
+      "category": "API",
+      "content": "Most API usage tiers include a default request quota. A 429 response indicates that the retry window is temporarily exceeded; reduce concurrency or retry later.",
+      "tags": ["api", "rate limit", "429"]
+    }
+  ],
+  "ticketAuditLogs": [
+    {
+      "id": "log-001",
+      "ticket_id": "ticket-001",
+      "action_taken": "Draft Edited",
+      "performed_by": "AI Assistant",
+      "timestamp": "2026-07-20T09:20:00.000Z"
+    },
+    {
+      "id": "log-002",
+      "ticket_id": "ticket-002",
+      "action_taken": "Status Changed",
+      "performed_by": "Support Lead",
+      "timestamp": "2026-07-21T15:40:00.000Z"
+    },
+    {
+      "id": "log-003",
+      "ticket_id": "ticket-003",
+      "action_taken": "Action Approved",
+      "performed_by": "Support Manager",
+      "timestamp": "2026-07-19T10:00:00.000Z"
+    },
+    {
+      "id": "log-004",
+      "ticket_id": "ticket-004",
+      "action_taken": "Draft Edited",
+      "performed_by": "AI Assistant",
+      "timestamp": "2026-07-22T11:35:00.000Z"
+    },
+    {
+      "id": "log-005",
+      "ticket_id": "ticket-005",
+      "action_taken": "Status Changed",
+      "performed_by": "Support Lead",
+      "timestamp": "2026-07-16T08:15:00.000Z"
+    }
+  ]
+}
