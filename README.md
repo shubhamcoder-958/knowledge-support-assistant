@@ -6,7 +6,7 @@ An AI-powered internal customer support workspace built with **Next.js 14**, **T
 
 ## 🚀 Live Demo
 
-**Live Application:** https://YOUR-VERCEL-URL.vercel.app
+**Live Application:** https://knowledge-support-assistant-opal.vercel.app/
 
 **GitHub Repository:** https://github.com/shubhamcoder-958/knowledge-support-assistant
 
