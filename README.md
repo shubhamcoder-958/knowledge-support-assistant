@@ -1,64 +1,74 @@
 # Knowledge-Grounded Customer Support Assistant
 
-An internal AI-powered customer support workspace built with Next.js, TypeScript, Tailwind CSS, and Google Gemini.
-
-The application assists support agents by analyzing customer tickets, retrieving relevant knowledge base articles, drafting responses, and recommending internal actions while ensuring that every AI-generated decision requires human approval.
+An AI-powered internal customer support workspace built with **Next.js 14**, **TypeScript**, **Tailwind CSS**, and **Google Gemini AI**. The application assists support agents by analyzing customer support tickets, retrieving relevant knowledge base articles, drafting customer responses, and recommending internal actions while ensuring every AI-generated output is reviewed by a human before approval.
 
 ---
 
-## Features
+## 🚀 Live Demo
 
-### Ticket Management
+**Live Application:** https://YOUR-VERCEL-URL.vercel.app
 
-- Create and edit support tickets
-- Customer Type
+**GitHub Repository:** https://github.com/shubhamcoder-958/knowledge-support-assistant
+
+---
+
+# Features
+
+## Ticket Management
+
+- Create and edit customer support tickets
+- Customer Types
   - Free
   - Pro
   - Enterprise
-- Product Area
+- Product Areas
   - Billing
   - Authentication
   - Dashboard
   - API
-- Previous communication
-- User-selected urgency
+- Optional urgency selection
+- Previous communication history
 - Ticket status management
 
 ---
 
-### AI Workflow
+## Gemini AI Workflow
 
-The Gemini-powered workflow performs the following:
+The AI agent performs the complete support workflow:
 
-- Issue classification
-- Suggested urgency prediction
-- Knowledge-base retrieval
-- Missing information detection
-- Follow-up question generation
-- Knowledge-grounded response drafting
-- Internal action recommendation
-- Citation of knowledge sources
-- Confidence scoring
+- Classifies support issues
+- Suggests ticket urgency
+- Retrieves relevant knowledge base articles
+- Identifies missing information
+- Generates follow-up questions
+- Drafts customer responses grounded in retrieved knowledge
+- Suggests one internal action
+- Provides citations for the drafted response
+- Provides citations supporting the suggested internal action
+- Returns a confidence score
 
-The AI never sends responses or executes actions automatically.
+The AI **never** sends responses or executes actions automatically.
 
 ---
 
-### Human-in-the-loop Review
+## Human-in-the-Loop Workflow
 
-Support agents can:
+Support agents remain in complete control.
 
-- Inspect retrieved knowledge articles
+The application allows agents to:
+
+- Inspect retrieved knowledge sources
+- View full knowledge articles
 - Edit AI-generated responses
-- Approve or reject responses
-- Approve or reject suggested actions
+- Approve or reject drafted responses
+- Approve or reject suggested internal actions
 - Update ticket status
-- Review decision history
+- Review audit history
 - Review communication history
 
 ---
 
-## Tech Stack
+# Tech Stack
 
 - Next.js 14
 - React
@@ -66,37 +76,113 @@ Support agents can:
 - Tailwind CSS
 - Google Gemini API
 - Zod
-- Lucide Icons
+- Lucide React
 
 ---
 
-## Project Structure
+# Project Structure
 
 ```
 app/
-api/
+ ├── api/
+ │   ├── agent/
+ │   └── tickets/
 components/
 lib/
-types/
 public/
+types/
 ```
 
 ---
 
-## Installation
+# Architecture
+
+```
+Customer Ticket
+
+        │
+
+        ▼
+
+Gemini AI Agent
+
+        │
+
+        ▼
+
+Knowledge Retrieval
+
+        │
+
+        ▼
+
+Issue Classification
+
+        │
+
+        ▼
+
+Missing Information Detection
+
+        │
+
+        ▼
+
+Follow-up Question Generation
+
+        │
+
+        ▼
+
+Draft Response
+
+        │
+
+        ▼
+
+Internal Action Recommendation
+
+        │
+
+        ▼
+
+Human Review
+
+        │
+
+        ▼
+
+Approve / Reject
+
+        │
+
+        ▼
+
+Ticket History
+```
+
+---
+
+# Installation
+
+Clone the repository
 
 ```bash
 git clone https://github.com/shubhamcoder-958/knowledge-support-assistant.git
 
 cd knowledge-support-assistant
+```
 
+Install dependencies
+
+```bash
 npm install
 ```
 
 Create a `.env.local`
 
 ```env
-GEMINI_API_KEY=your_api_key
+GEMINI_API_KEY=YOUR_GEMINI_API_KEY
 ```
 
 Run locally
@@ -105,77 +191,59 @@ Run locally
 npm run dev
 ```
 
----
+Build
 
-## Architecture
-
-```
-Support Ticket
-
-↓
-
-Gemini AI Agent
-
-↓
-
-Knowledge Retrieval
-
-↓
-
-Issue Classification
-
-↓
-
-Response Draft
-
-↓
-
-Human Review
-
-↓
-
-Approve / Reject
-
-↓
-
-Ticket History
+```bash
+npm run build
 ```
 
 ---
 
-## Completed Scope
+# Environment Variables
 
-- AI ticket classification
-- Suggested urgency
+| Variable | Description |
+|----------|-------------|
+| GEMINI_API_KEY | Google Gemini API Key |
+
+---
+
+# Completed Scope
+
+- AI issue classification
+- Suggested urgency prediction
 - Knowledge retrieval
 - Missing information detection
 - Follow-up question generation
-- Draft response generation
+- Knowledge-grounded customer response
 - Internal action recommendation
 - Citation support
+- Confidence scoring
 - Human approval workflow
-- Ticket status updates
+- Ticket status management
+- Audit history
 - Communication history
-- Decision history
+- Responsive UI
 
 ---
 
-## Intentionally Excluded
+# Intentionally Excluded
 
-- Authentication
+To keep the project focused on the assignment requirements, the following were intentionally excluded:
+
+- User authentication
+- Role-based permissions
 - Database persistence
-- Email sending
-- Real ticketing integrations
-- Production search engine
+- Email integration
+- External ticketing systems
 - Vector database
-
-These were excluded to keep the project focused on the assignment requirements.
+- Semantic search
+- Multi-agent orchestration
 
 ---
 
-## Testing
+# Testing
 
-Test using the following example.
+## Sample Ticket
 
 Customer Type
 
@@ -192,7 +260,13 @@ Authentication
 Issue
 
 ```
-Unable to login after resetting password.
+Unable to log in after resetting my password.
+```
+
+Previous Communication
+
+```
+Customer already cleared browser cache.
 ```
 
 Urgency
@@ -203,26 +277,64 @@ High
 
 ---
 
-## Known Limitations
+# Known Limitations
 
 - Uses a mock knowledge base
-- No database persistence
-- No user authentication
-- No vector embeddings
-- No streaming AI responses
+- Ticket data is stored in memory for demonstration purposes
+- Data resets when the serverless function restarts
+- No authentication
+- No persistent database
+- No vector search
 
 ---
 
-## Deployment
+# Deployment
 
-Deploy using Vercel.
+The application is deployed on **Vercel**.
 
-Required environment variables
+Required environment variable:
 
-```
+```env
 GEMINI_API_KEY
 ```
 
-Repository
+---
 
-https://github.com/shubhamcoder-958/knowledge-support-assistant
+# AI Safety
+
+The AI is intentionally prevented from:
+
+- Sending customer emails automatically
+- Executing internal actions automatically
+- Closing tickets automatically
+
+All AI-generated content requires explicit human approval.
+
+---
+
+# Future Improvements
+
+- PostgreSQL / MongoDB persistence
+- Vector search using embeddings
+- Authentication and RBAC
+- Real ticketing integrations
+- Streaming AI responses
+- Knowledge base management
+- Analytics dashboard
+- Multi-language support
+
+---
+
+# Repository Requirements
+
+Included in this repository:
+
+- ✅ README.md
+- ✅ AGENT_USAGE.md
+- ✅ .env.example
+
+No API keys, tokens, or secrets are committed.
+
+---
+
+Developed as part of the **Knowledge-Grounded Customer Support Assistant** mini-project assignment.
